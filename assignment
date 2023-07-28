@@ -1,0 +1,23 @@
+----------------------------------React.js-----------------------------------
+
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [backgroundColor, setBackgroundColor] = useState('#ffffff');
+  const [isToggled, setIsToggled] = useState(false);
+
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+    setBackgroundColor(isToggled ? '#ffffff' : '#f0f0f0');
+  };
+
+  return (
+    <div className="App" style={{ backgroundColor }}>
+      <h1>Background Color Toggle</h1>
+      <button onClick={handleToggle}>Toggle Background Color</button>
+    </div>
+  );
+}
+
+export default App;
